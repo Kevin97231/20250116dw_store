@@ -29,9 +29,6 @@ export const Navbar = () => {
           <li>
             <HeaderItem href={"/products"}>Nos produits</HeaderItem>
           </li>
-          <li>
-            <HeaderItem href={"/"}>Accueil</HeaderItem>
-          </li>
         </ul>
       </div>
       {/* <div className="navbar-end">
