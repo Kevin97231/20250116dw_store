@@ -33,6 +33,7 @@ function App() {
 
 export default App;
 
+// EXEMPLE, MM GESTION QUE PROJET PRECEDENT :
 // function App() {
 //   return (
 //     <BrowserRouter>
