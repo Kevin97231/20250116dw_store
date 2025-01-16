@@ -3,6 +3,7 @@ import "./App.css";
 import { Navbar } from "./components/Navbar";
 import { NotFound } from "./view/NotFound";
 import { HomePage } from "./view/HomePage";
+import { ProductDetail } from "./view/ProductDetail";
 
 function App() {
   const router = createBrowserRouter([
@@ -12,7 +13,7 @@ function App() {
       errorElement: <>ERREUR</>,
       children: [
         { path: "", element: <HomePage /> },
-        { path: "/products", element: <>my product</> },
+        { path: "/product/:id", element: <ProductDetail /> },
         { path: "/*", element: <NotFound /> },
       ],
     },

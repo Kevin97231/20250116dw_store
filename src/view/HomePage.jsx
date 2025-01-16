@@ -3,12 +3,15 @@ import { useAxios } from "../Hooks/useAxios";
 import { ProductList } from "../components/ProductList";
 
 export const HomePage = () => {
-  const { get } = useAxios();
+  const { get, getPaginate } = useAxios();
 
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    get().then((resp) => setProducts(resp));
+    getPaginate().then((resp) => {
+      console.log(resp);
+      setProducts(resp.data);
+    });
   }, []);
 
   return (

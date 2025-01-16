@@ -1,5 +1,13 @@
+import { useNavigate } from "react-router-dom";
+
 /* eslint-disable react/prop-types */
 export const Card = ({ product }) => {
+  const navigate = useNavigate();
+
+  const navigateToDetail = () => {
+    navigate(`product/${product.id}`);
+  };
+
   return (
     <div className="flex shadow-xl card bg-base-100 w-96">
       <figure>
@@ -15,7 +23,9 @@ export const Card = ({ product }) => {
         <p>{product.decription}</p>
         <p>{product.price}</p>
         <div className="justify-end card-actions">
-          <button className="btn btn-primary">Voir</button>
+          <button className="btn btn-primary" onClick={navigateToDetail}>
+            Voir
+          </button>
         </div>
       </div>
     </div>
