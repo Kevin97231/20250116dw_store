@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { HeaderItem } from "./HeaderItem";
 
 export const Navbar = () => {
   return (
@@ -26,7 +27,10 @@ export const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 font-bold">
           <li>
-            <Link to={"/products"}>Nos produits</Link>
+            <HeaderItem href={"/products"}>Nos produits</HeaderItem>
+          </li>
+          <li>
+            <HeaderItem href={"/"}>Accueil</HeaderItem>
           </li>
         </ul>
       </div>
