@@ -2,6 +2,7 @@ import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import "./App.css";
 import { Navbar } from "./components/Navbar";
 import { NotFound } from "./view/NotFound";
+import { HomePage } from "./view/HomePage";
 
 function App() {
   const router = createBrowserRouter([
@@ -10,7 +11,7 @@ function App() {
       element: <Root />,
       errorElement: <>ERREUR</>,
       children: [
-        { path: "", element: <>Homepage</> },
+        { path: "", element: <HomePage /> },
         { path: "/products", element: <>my product</> },
         { path: "/*", element: <NotFound /> },
       ],
