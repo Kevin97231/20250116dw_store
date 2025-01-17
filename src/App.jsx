@@ -5,6 +5,7 @@ import { NotFound } from "./view/NotFound";
 import { HomePage } from "./view/HomePage";
 import { ProductDetail } from "./view/ProductDetail";
 import { CompteurRedux } from "./view/CompteurRedux";
+import { Cart } from "./view/Cart";
 
 function App() {
   const router = createBrowserRouter([
@@ -16,6 +17,7 @@ function App() {
         { path: "", element: <HomePage /> },
         { path: "/product/:id", element: <ProductDetail /> },
         { path: "/compteur-redux", element: <CompteurRedux /> },
+        { path: "/cart", element: <Cart /> },
         { path: "/*", element: <NotFound /> },
       ],
     },

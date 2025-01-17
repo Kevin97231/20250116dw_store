@@ -8,10 +8,15 @@ export const cartSlice = createSlice({
   },
   reducers: {
     addProduct: (state, action) => {
-      const product = action.payload;
+      const productToAdd = action.payload;
+
+      // Condition pour éviter les doublons dans le panier
+      if (!state.value.some((product) => product.id === productToAdd.id)) {
+        state.value.push(productToAdd);
+      }
     },
   },
 });
 
-export const { addProduct } = counterSlice.actions;
+export const { addProduct } = cartSlice.actions;
 export default cartSlice.reducer;
