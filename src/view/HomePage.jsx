@@ -3,12 +3,15 @@ import { useAxios } from "../Hooks/useAxios";
 import { ProductList } from "../components/ProductList";
 import { Pagination } from "../components/Pagination";
 import { MySelect } from "../components/MySelect";
+import { useSelector } from "react-redux";
 
 export const HomePage = () => {
   const { getPaginate, page, perPage, setPage, setPerPage } = useAxios();
   const [products, setProducts] = useState([]);
   const [responseObject, setResponseObject] = useState({ pages: 0, items: 0 });
   const [tableSelect, setTableSelect] = useState([]);
+
+  const count = useSelector((state) => state.counter.value);
 
   useEffect(() => {
     getPaginate().then((resp) => {
@@ -42,6 +45,7 @@ export const HomePage = () => {
   return (
     <>
       <section>
+        <h1>{count}</h1>
         <ProductList products={products} />
 
         <Pagination

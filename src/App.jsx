@@ -4,6 +4,7 @@ import { Navbar } from "./components/Navbar";
 import { NotFound } from "./view/NotFound";
 import { HomePage } from "./view/HomePage";
 import { ProductDetail } from "./view/ProductDetail";
+import { CompteurRedux } from "./view/CompteurRedux";
 
 function App() {
   const router = createBrowserRouter([
@@ -14,6 +15,7 @@ function App() {
       children: [
         { path: "", element: <HomePage /> },
         { path: "/product/:id", element: <ProductDetail /> },
+        { path: "/compteur-redux", element: <CompteurRedux /> },
         { path: "/*", element: <NotFound /> },
       ],
     },

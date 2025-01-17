@@ -19,6 +19,7 @@ export const Navbar = () => {
             <li>
               <Link to={"/"}>Accueil</Link>
               <Link to={"/products"}>Nos produits</Link>
+              <Link to={"/compteur-redux"}>Contact</Link>
             </li>
             {/* __________________________________________________________________ */}
           </ul>
@@ -28,6 +29,9 @@ export const Navbar = () => {
         <ul className="menu menu-horizontal px-1 font-bold">
           <li>
             <HeaderItem href={"/products"}>Nos produits</HeaderItem>
+          </li>
+          <li>
+            <HeaderItem href={"/compteur-redux"}>Compteur Redux</HeaderItem>
           </li>
         </ul>
       </div>
